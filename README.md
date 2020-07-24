@@ -13,8 +13,8 @@ I will use IntelliJ for Spring(Java) and VSCode for Angular(JS/HTML/CSS/TS).
 
 ## Todos
 
-* Set up the Angular and Spring framework.
-* add Dependencies to Spring framework (MongoDB, Jackson, spring boot, jpa, devtools, maybe h2 database)
+* Set up the Angular and Spring framework.[x]
+* add Dependencies to Spring framework (MongoDB, Jackson, spring boot, jpa, devtools, maybe h2 database).[x]
 
 * Grab the tournament data from an ITTF Endpoint eg https://results.ittf.com/ittf-web-results/html/TTE5146/brackets/M.SINGLES-----------.json.
 * Save it to DB.
