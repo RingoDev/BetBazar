@@ -16,7 +16,8 @@ I will use IntelliJ for Spring(Java) and VSCode for Angular(JS/HTML/CSS/TS).
 * Set up the Angular and Spring framework.[x]
 * add Dependencies to Spring framework (MongoDB, Jackson, spring boot, jpa, devtools, maybe h2 database).[x]
 
-* Grab the tournament data from an ITTF Endpoint eg https://results.ittf.com/ittf-web-results/html/TTE5146/brackets/M.SINGLES-----------.json.
+* Grab the tournament data from an ITTF Endpoint eg https://results.ittf.com/ittf-web-results/html/TTE5146/brackets/M.SINGLES-----------.json.[x]
+* Save it to JPA repository.[x]
 * Save it to DB.
 * Load the Data from the DB into a Java repository.
 * grab data in Angular from Spring repository and display it on the website.
