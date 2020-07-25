@@ -16,6 +16,15 @@ public class Event {
     String desc;
     @JsonProperty("isDoubles")
     boolean isDoubles;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     @JsonProperty("Phases")
     @OneToMany(cascade = {CascadeType.ALL},fetch = FetchType.EAGER)
     List<Round> phases;

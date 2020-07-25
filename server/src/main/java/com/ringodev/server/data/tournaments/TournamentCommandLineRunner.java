@@ -32,5 +32,4 @@ public class TournamentCommandLineRunner implements CommandLineRunner {
         repository.save(new Tournament(list));
         repository.findAll().forEach(System.out::println);
     }
-
 }
