@@ -1,0 +1,1 @@
+export * from './tournament-data/tournament.service';

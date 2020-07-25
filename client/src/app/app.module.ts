@@ -3,14 +3,35 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TournamentComponent } from './tournament/tournament.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
+import { LoginComponent } from './login/login.component';
+import { UserComponent } from './user/user.component';
+import { RegisterComponent } from './register/register.component';
+import { LandingComponent } from './landing/landing.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
-  ],
+    AppComponent,
+    TournamentComponent,
+    LoginComponent,
+    UserComponent,
+    RegisterComponent,
+    LandingComponent,
+    PageNotFoundComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+    AngularFireAuthModule, // imports firebase/auth, only needed for auth features
   ],
   providers: [],
   bootstrap: [AppComponent]
