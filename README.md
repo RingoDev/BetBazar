@@ -20,9 +20,20 @@ I will use IntelliJ for Spring(Java) and VSCode for Angular(JS/HTML/CSS/TS).
 * Save it to DB.
 * Load the Data from the DB into a Java repository.
 * [x] grab data in Angular from Spring repository and display it on the website.
+* [x] Set up Routes eg. Login.
+* [x] add Project to Firebase and use their User Authentication.
+* [x] Enable User Login.
+  * Email
+  * [x] Google
+* Block Logged In Users from seeing Login and Register page
+* Set up user space that is only accessible when logged in. eg. firebase auth-guard
 * set up API in Spring to forward operations.
-* add Project to Firebase and use their User Authentication.
-* Enable User Login.
+
+
+### Styling
+
+* Get real NavBar
+
 
 
 
