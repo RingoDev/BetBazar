@@ -29,14 +29,13 @@ I will use IntelliJ for Spring(Java) and VSCode for Angular(JS/HTML/CSS/TS).
 * Set up user space that is only accessible when logged in. eg. firebase auth-guard
 * set up API in Spring to forward operations.
 
+* Keep a DataBase of registered Users and the corresponding Bets.
 
 ### Styling
 
-* Get real NavBar
+* Get a real NavBar
 
 
 
 
 
-
-* Keep a DataBase of registered Users and the corresponding Bets.
