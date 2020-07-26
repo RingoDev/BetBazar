@@ -26,19 +26,4 @@ public class ServerApplication {
         return builder.build();
     }
 
-//    @Bean
-//    public CommandLineRunner run(RestTemplate restTemplate, TournamentRepository repository) throws Exception {
-//        return args -> {
-//            //"M.DOUBLES","W.DOUBLES"
-//            String[] str = {"M.SINGLES","W.SINGLES"};
-//            for (String s : str) {
-//                Event[] event = restTemplate.getForObject(
-//                        "https://results.ittf.com/ittf-web-results/html/TTE5146/brackets/" + s + "-----------.json", Event[].class);
-//
-//                assert event != null;
-//                log.info(event[0].toString());
-//            }
-//        };
-//    }
-
 }
