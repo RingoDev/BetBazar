@@ -5,13 +5,23 @@ import { RegisterComponent } from './register/register.component';
 import { LandingComponent } from './landing/landing.component';
 import { TournamentComponent } from './tournament/tournament.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 
 const routes: Routes = [
-  {path: '' ,component: LandingComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent},
-  {path: 'tournament', component: TournamentComponent},
-  {path: '**' , component: PageNotFoundComponent}
+  { path: '', component: LandingComponent },
+  {
+    path: 'tournament', component: TournamentComponent,
+    canActivate: [AngularFireAuthGuard],
+    data: {
+      authGuardPipe: redirectUnauthorizedToLogin
+    }
+  },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: '**', component: PageNotFoundComponent },
+
 ];
 
 @NgModule({
