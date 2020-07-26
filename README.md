@@ -1,7 +1,10 @@
 I am starting a new Project
+
 The Technologies used will be Java/Spring and Angular.
 The Goal is to create a Webapp that allows Users to place bets against other users on ITTF Pro Tour tournament matches.
 I will use IntelliJ for Spring(Java) and VSCode for Angular(JS/HTML/CSS/TS).
+
+My main motivation for this project is to learn basic full-stack development and gain experience using the Angular and Spring frameworks.
 
 ## Goals
 
