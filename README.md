@@ -31,6 +31,7 @@ My main motivation for this project is to learn basic full-stack development and
 * [x] Enable User Login.
   * Email
   * [x] Google
+* research canActivate and be able to check if a user is logged in or not.
 * Block Logged In Users from seeing Login and Register page
 * Set up user space that is only accessible when logged in. eg. firebase auth-guard
 * set up API in Spring to forward operations.
@@ -39,7 +40,7 @@ My main motivation for this project is to learn basic full-stack development and
 
 ### Styling
 
-* Get a real NavBar
+* [x] Get a real NavBar
 
 
 
