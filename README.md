@@ -1,7 +1,10 @@
 I am starting a new Project
+
 The Technologies used will be Java/Spring and Angular.
 The Goal is to create a Webapp that allows Users to place bets against other users on ITTF Pro Tour tournament matches.
 I will use IntelliJ for Spring(Java) and VSCode for Angular(JS/HTML/CSS/TS).
+
+My main motivation for this project is to learn basic full-stack development and gain experience using the Angular and Spring frameworks.
 
 ## Goals
 
@@ -17,6 +20,9 @@ I will use IntelliJ for Spring(Java) and VSCode for Angular(JS/HTML/CSS/TS).
 * [x] add Dependencies to Spring framework (MongoDB, Jackson, spring boot, jpa, devtools, maybe h2 database).
 * [x] Grab the tournament data from an ITTF Endpoint eg https://results.ittf.com/ittf-web-results/html/TTE5146/brackets/M.SINGLES-----------.json.
 * [x] Save it to JPA repository.
+* Install MongoDB DataBase
+* Create a Scheme
+* Connect DB to Spring Framework
 * Save it to DB.
 * Load the Data from the DB into a Java repository.
 * [x] grab data in Angular from Spring repository and display it on the website.
@@ -25,18 +31,18 @@ I will use IntelliJ for Spring(Java) and VSCode for Angular(JS/HTML/CSS/TS).
 * [x] Enable User Login.
   * Email
   * [x] Google
+* research canActivate and be able to check if a user is logged in or not.
 * Block Logged In Users from seeing Login and Register page
 * Set up user space that is only accessible when logged in. eg. firebase auth-guard
 * set up API in Spring to forward operations.
 
+* Keep a DataBase of registered Users and the corresponding Bets.
 
 ### Styling
 
-* Get real NavBar
+* [x] Get a real NavBar
 
 
 
 
 
-
-* Keep a DataBase of registered Users and the corresponding Bets.
