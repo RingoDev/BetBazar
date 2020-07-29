@@ -1,8 +1,9 @@
-package com.ringodev.server.data.bet;
+package com.ringodev.server.data.user;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource
-public interface BetRepository extends MongoRepository<Bet, Long> {
+public interface UserRepository extends MongoRepository<User, String> {
+
 }
