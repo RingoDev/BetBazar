@@ -56,7 +56,6 @@ My main motivation for this project is to learn basic full-stack development and
 * create Endpoint to accept Bet
 * mark Bet as saved and add AccepterID
 * create Endpoint to send Bets of certain User
-
 * Keep a DataBase of registered Users and the corresponding Bets.
 
 ### Styling
