@@ -18,37 +18,39 @@ My main motivation for this project is to learn basic full-stack development and
 
 ### Angular
 
-* [x] Set up the Angular and Spring framework.
-* [x] add Dependencies to Spring framework (MongoDB, Jackson, spring boot, jpa, devtools, maybe h2 database).
-* [x] Grab the tournament data from an ITTF Endpoint eg https://results.ittf.com/ittf-web-results/html/TTE5146/brackets/M.SINGLES-----------.json.
-* [x] Save it to JPA repository.
+* [x] Set up the Angular and Spring framework
+* [x] add Dependencies to Spring framework (MongoDB, Jackson, spring boot, jpa, devtools, maybe h2 database)
+* [x] Grab the tournament data from an ITTF Endpoint eg https://results.ittf.com/ittf-web-results/html/TTE5146/brackets/M.SINGLES-----------.json
+* [x] Save it to JPA repository
 * Install MongoDB DataBase
 * Create a Scheme
 * Connect DB to Spring Framework
-* Save it to DB.
-* Load the Data from the DB into a Java repository.
-* [x] grab data in Angular from Spring repository and display it on the website.
-* [x] Set up Routes eg. Login.
-* [x] add Project to Firebase and use their User Authentication.
-* [x] Enable User Login.
+* Save it to DB
+* Load the Data from the DB into a Java repository
+* [x] grab data in Angular from Spring repository and display it on the website
+* [x] Set up Routes eg. Login
+* [x] add Project to Firebase and use their User Authentication
+* [x] Enable User Login
   * Email
     * [x] sign in
     * login
   * [x] Google
-* [x] research canActivate and be able to check if a user is logged in or not.
+* [x] research canActivate and be able to check if a user is logged in or not
 * [x] Block Logged In Users from seeing Login and Register page
 * [x] Set up user space that is only accessible when logged in. eg. firebase auth-guard
-* get UserID from firebase api.
-* request bets of this user from Spring.
-* request all open bets(except same User) from Spring.
-* display userspecific bets and acceptable bets.
+* [x] get UserID from firebase api
+* [x] post UserData on register to Spring
+* request bets of this user from Spring
+* request all open bets(except same User) from Spring
+* display userspecific bets and acceptable bets
 * set up user specific userspace
-* set up API in Spring to forward operations.
+* set up API in Spring to forward operations
 
 ### Spring
 
 * [x] create MongoDB instance
 * [x] save Bets to MongoDb
+* [x] save registered User to DB
 * create Endpoint to create a Bet
 * save created Bet to DBrepository
 * create Endpoint to accept Bet
