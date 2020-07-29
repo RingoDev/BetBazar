@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import * as firebase from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth'
 import { HttpClient } from '@angular/common/http';
-import { User } from '../../model/user'
+import { User } from '../../../model/user'
 import { Router } from "@angular/router";
+import {UserService} from '../user/user.service'
 
 
 
@@ -15,7 +16,8 @@ export class AuthService {
   userData: any; // Save logged in user data
   constructor(private http: HttpClient,
     public router: Router,
-    public afAuth: AngularFireAuth) {
+    public afAuth: AngularFireAuth,
+    public uService: UserService) {
 
     /* Saving user data in localstorage when 
 logged in and setting up null when logged out */
@@ -65,6 +67,10 @@ provider in Backend DB*/
       photoURL: user.photoURL,
       emailVerified: user.emailVerified
     }
+    console.log('trying to add User');
+    this.uService.addUser(userData).subscribe((data:String)=>{
+      console.log(data);
+    });
   }
 
 
