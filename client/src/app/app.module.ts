@@ -16,6 +16,7 @@ import { LandingComponent } from './landing/landing.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { VerifyComponent } from './verify/verify.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegisterComponent,
     LandingComponent,
     PageNotFoundComponent,
-    NavbarComponent],
+    NavbarComponent,
+    VerifyComponent],
   imports: [        
     FormsModule,
     ReactiveFormsModule,
