@@ -42,12 +42,4 @@ export class RegisterComponent {
        this.successMessage = "";
      })
    }
-
-  tryGoogleLogin() {
-    this.authService.loginWithGoogle()
-      .then(res => {
-        this.router.navigate(['/tournament']);
-      })
-  }
-
 }

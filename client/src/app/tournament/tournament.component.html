@@ -6,8 +6,13 @@
         <br>
         <div *ngFor="let ph of e.Phases">
             <div *ngFor="let m of ph.Matches">
-                {{m.Away.Desc}} 
-                {{m.Home.Desc}}
+                <br>
+                <button type="submit"  
+                class="btn btn-primary btn-block" 
+                (click)="tryPlaceBet(t.id,e.id,ph.id,m.id,0)" >{{m.Away.Desc}}</button>
+                <button type="submit"  
+                class="btn btn-primary btn-block" 
+                (click)="tryPlaceBet(t.id,e.id,ph.id,m.id,1)" >{{m.Home.Desc}}</button>
                 <br>
                 Result: {{m.Away.Res}}:{{m.Home.Res}}
                 <br><br>

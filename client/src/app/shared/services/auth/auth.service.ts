@@ -41,10 +41,25 @@ logged in and setting up null when logged out */
         up and returns promise */
         this.SendVerificationMail();
         this.SetUserData(result.user);
+        this.RegisterUserInBackend(this.userData);
       }).catch((error) => {
         window.alert(error.message)
       })
   }
+
+    // Log in with email/password
+    async LogInWithMail(email, password) {
+      return this.afAuth.signInWithEmailAndPassword(email, password)
+        .then((result) => {
+          this.afAuth.currentUser.then((user) => {
+            if(user.emailVerified)this.router.navigate(['tournament']);
+            else this.router.navigate(['verify']);
+          })
+          this.SetUserData(result.user);
+        }).catch((error) => {
+          window.alert(error.message)
+        })
+    }
 
   // Send email verfification when new user sign up
   async SendVerificationMail() {
@@ -60,19 +75,22 @@ logged in and setting up null when logged out */
 sign up with username/password and sign in with social auth  
 provider in Backend DB*/
   SetUserData(user) {
-    const userData: User = {
+    this.userData = {
       uid: user.uid,
       email: user.email,
       displayName: user.displayName,
       photoURL: user.photoURL,
       emailVerified: user.emailVerified
     }
-    console.log('trying to add User');
-    this.uService.addUser(userData).subscribe((data:String)=>{
-      console.log(data);
-    });
   }
 
+  RegisterUserInBackend(user){
+    console.log('trying to add User');
+    this.uService.addUser(user).subscribe((answer: boolean)=>{
+      if(answer)console.log('User has been added');
+      else console.log('User has not been added');
+    });
+  }
 
   get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user'));
@@ -87,6 +105,10 @@ provider in Backend DB*/
       this.afAuth.signInWithPopup(provider)
         .then(res => {
           resolve(res);
+          this.afAuth.currentUser.then((user) => {
+            this.SetUserData(user);
+            this.RegisterUserInBackend(user);
+          });
         }, err => {
           console.log(err);
           reject(err);
