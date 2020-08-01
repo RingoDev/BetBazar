@@ -3,11 +3,7 @@ package com.ringodev.server.data.bet;
 class SimpleBet {
 
     String posterID;
-    int tournamentID;
-    int eventID;
-    int roundID;
-    int matchID;
-
+    MatchReference matchReference;
     int winningTeam;
 
     public String getPosterID() {
@@ -18,37 +14,6 @@ class SimpleBet {
         this.posterID = posterID;
     }
 
-    public int getTournamentID() {
-        return tournamentID;
-    }
-
-    public void setTournamentID(int tournamentID) {
-        this.tournamentID = tournamentID;
-    }
-
-    public int getEventID() {
-        return eventID;
-    }
-
-    public void setEventID(int eventID) {
-        this.eventID = eventID;
-    }
-
-    public int getRoundID() {
-        return roundID;
-    }
-
-    public void setRoundID(int roundID) {
-        this.roundID = roundID;
-    }
-
-    public int getMatchID() {
-        return matchID;
-    }
-
-    public void setMatchID(int matchID) {
-        this.matchID = matchID;
-    }
 
     public int getWinningTeam() {
         return winningTeam;
@@ -59,12 +24,26 @@ class SimpleBet {
     }
 
 
+    public MatchReference getMatchReference() {
+        return matchReference;
+    }
+
+    public void setMatchReference(MatchReference matchReference) {
+        this.matchReference = matchReference;
+    }
+
     public Bet toBet() {
         return new Bet(this.posterID,
-                this.tournamentID,
-                this.eventID,
-                this.roundID,
-                this.matchID,
+                this.matchReference,
                 this.winningTeam);
+    }
+
+    @Override
+    public String toString() {
+        return "SimpleBet{" +
+                "posterID='" + posterID + '\'' +
+                ", matchReference=" + matchReference +
+                ", winningTeam=" + winningTeam +
+                '}';
     }
 }
