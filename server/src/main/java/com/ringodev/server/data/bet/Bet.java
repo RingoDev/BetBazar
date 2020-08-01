@@ -3,32 +3,41 @@ package com.ringodev.server.data.bet;
 public class Bet {
 
     BetState state;
-    private final String name;
 
     // the User that opened the bet
-    private final int posterID;
+    private final String posterID;
 
     //the User that agreed to the bet
-    private int accepterID;
+    private String accepterID;
 
-    private MatchReference matchRef;
+    int tournamentID, eventID, roundID, matchID, winningTeam;
 
 
-    Bet(String name, int posterID){
-        this.name = name;
+    Bet(String posterID,
+        int tournamentID,
+        int eventID,
+        int roundID,
+        int matchID,
+        int winningTeam) {
         this.posterID = posterID;
+        this.tournamentID = tournamentID;
+        this.eventID = eventID;
+        this.roundID = roundID;
+        this.matchID = matchID;
+        this.winningTeam = winningTeam;
+
         state = BetState.OPEN;
     }
 
-    public int getPosterID() {
+    public String getPosterID() {
         return posterID;
     }
 
-    public int getAccepterID() {
+    public String getAccepterID() {
         return accepterID;
     }
 
-    public void setAccepterID(int accepterID) {
+    public void setAccepterID(String accepterID) {
         this.accepterID = accepterID;
     }
 
@@ -40,16 +49,13 @@ public class Bet {
         this.state = state;
     }
 
-    public String getName() {
-        return name;
+
+    enum BetState {
+        OPEN, ACCEPTED, CLOSED
     }
 
-    enum BetState{
-        OPEN,ACCEPTED,CLOSED
-    }
-
-    public boolean acceptBet(int accepterID){
-        if(state != BetState.OPEN)return false;
+    public boolean acceptBet(String accepterID) {
+        if (state != BetState.OPEN) return false;
         this.accepterID = accepterID;
         this.state = BetState.ACCEPTED;
         return true;
@@ -59,10 +65,9 @@ public class Bet {
     public String toString() {
         return "Bet{" +
                 "state=" + state +
-                ", name='" + name + '\'' +
+
                 ", posterID=" + posterID +
                 ", accepterID=" + accepterID +
-                ", matchRef=" + matchRef +
                 '}';
     }
 }

@@ -22,7 +22,6 @@ public class Info {
     @JsonProperty("HasTBD")
     boolean hasTBD;
     @JsonProperty("Status")
-    // maybe make status enum
     String status;
     @JsonProperty("Code")
     String Code;

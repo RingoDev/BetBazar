@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
-
 @RestController
 @RequestMapping("users")
 public class UserController {
@@ -32,10 +31,10 @@ public class UserController {
 
     @PostMapping("/addUser")
     @CrossOrigin(origins = "http://localhost:4200")
-    public String addUser(@RequestBody User newUser){
-        if(repository.findById(newUser.id).isPresent()) return "User has not successfully been added";
+    public boolean addUser(@RequestBody User newUser) {
+        if (repository.findById(newUser.id).isPresent()) return false;
         repository.insert(newUser);
         System.out.println("ADDED USER" + newUser.toString());
-        return "User has been added and successfully posted to Spring app";
+        return true;
     }
 }

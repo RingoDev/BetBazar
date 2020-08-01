@@ -24,8 +24,8 @@ public class Player {
     @JsonProperty("Win")
     boolean win;
 
-   // ranking position?
-   @JsonProperty("RkPos")
+    // ranking position?
+    @JsonProperty("RkPos")
     int RkPo;
 
     @Override

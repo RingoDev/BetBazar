@@ -26,7 +26,7 @@ public class Event {
     }
 
     @JsonProperty("Phases")
-    @OneToMany(cascade = {CascadeType.ALL},fetch = FetchType.EAGER)
+    @OneToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
     List<Round> phases;
 
     public String getCode() {
