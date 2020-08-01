@@ -51,8 +51,8 @@ My main motivation for this project is to learn basic full-stack development and
 * [x] create MongoDB instance
 * [x] save Bets to MongoDb
 * [x] save registered User to DB
-* create Endpoint to create a Bet
-* save created Bet to DBrepository
+* [x] create Endpoint to create a Bet
+* [x] save created Bet to DBrepository
 * create Endpoint to accept Bet
 * mark Bet as saved and add AccepterID
 * create Endpoint to send Bets of certain User
