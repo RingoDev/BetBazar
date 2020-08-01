@@ -9,7 +9,7 @@ My main motivation for this project is to learn basic full-stack development and
 ## Goals
 
 * Displaying the current running tournament on a Website.
-* Allowing Users to crreate an account.
+* [x] Allowing Users to crreate an account.
 * Allow a User to offer bets.
 * Allow other Users to accept these bets.
 * Save the Bets in some Database (MongoDb for now).
@@ -22,10 +22,9 @@ My main motivation for this project is to learn basic full-stack development and
 * [x] add Dependencies to Spring framework (MongoDB, Jackson, spring boot, jpa, devtools, maybe h2 database)
 * [x] Grab the tournament data from an ITTF Endpoint eg https://results.ittf.com/ittf-web-results/html/TTE5146/brackets/M.SINGLES-----------.json
 * [x] Save it to JPA repository
-* Install MongoDB DataBase
-* Create a Scheme
-* Connect DB to Spring Framework
-* Save it to DB
+* [x] Install MongoDB DataBase
+* [x] Connect DB to Spring Framework
+* Save tournament data to MongoDB.
 * Load the Data from the DB into a Java repository
 * [x] grab data in Angular from Spring repository and display it on the website
 * [x] Set up Routes eg. Login
@@ -33,18 +32,17 @@ My main motivation for this project is to learn basic full-stack development and
 * [x] Enable User Login
   * Email
     * [x] sign in
-    * login
-  * [x] Google
+    * [x] login
 * [x] research canActivate and be able to check if a user is logged in or not
 * [x] Block Logged In Users from seeing Login and Register page
 * [x] Set up user space that is only accessible when logged in. eg. firebase auth-guard
 * [x] get UserID from firebase api
 * [x] post UserData on register to Spring
-* request bets of this user from Spring
+* [x] request bets of this user from Spring
+* [x] display userspecific bets
+* [x] set up user specific userspace
+* [x] set up API in Spring to forward operations
 * request all open bets(except same User) from Spring
-* display userspecific bets and acceptable bets
-* set up user specific userspace
-* set up API in Spring to forward operations
 
 ### Spring
 
@@ -56,11 +54,12 @@ My main motivation for this project is to learn basic full-stack development and
 * create Endpoint to accept Bet
 * mark Bet as saved and add AccepterID
 * create Endpoint to send Bets of certain User
-* Keep a DataBase of registered Users and the corresponding Bets.
+* [x] Keep a DataBase of registered Users and the corresponding Bets.
 
 ### Styling
 
 * [x] Get a real NavBar
+* Use Bootstrap Cards to style bets
 
 
 
