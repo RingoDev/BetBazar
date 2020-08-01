@@ -36,10 +36,12 @@ export class TournamentComponent implements OnInit {
         if (user) {
           const bet:Bet = {
             posterID: user.uid,
-            tournamentID: tournamentID,
-            eventID: eventID,
-            roundID: roundID,
-            matchID: matchID,
+            matchReference : {
+              tournamentID: tournamentID,
+              eventID: eventID,
+              roundID: roundID,
+              matchID: matchID,
+            },
             winningTeam: winningTeam
           }
           this.betService.placeBet(bet).subscribe((value) =>{

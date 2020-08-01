@@ -1,0 +1,19 @@
+<p>you placed these bets:</p>
+
+<div *ngFor="let b of vBets">
+    <p>{{b.data.tournament}}</p>
+    <p>{{b.data.event}}</p>
+    <p>{{b.data.round}}</p>
+    <div>
+        <p *ngIf="awayWon(b)">your team:</p>
+        <p>{{b.data.player1}}</p>
+    </div>
+    <div>
+        <p *ngIf="!awayWon(b)">your team:</p>
+        <ng-template #elseBlock>Winner</ng-template>
+        <p>{{b.data.player2}}</p>
+    </div>
+
+    <br>
+    <br>
+</div>

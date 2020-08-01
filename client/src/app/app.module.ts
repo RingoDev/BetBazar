@@ -17,6 +17,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VerifyComponent } from './verify/verify.component';
+import { OpenBetsComponent } from './userSpace/open-bets/open-bets.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { VerifyComponent } from './verify/verify.component';
     LandingComponent,
     PageNotFoundComponent,
     NavbarComponent,
-    VerifyComponent],
+    VerifyComponent,
+    OpenBetsComponent],
   imports: [        
     FormsModule,
     ReactiveFormsModule,

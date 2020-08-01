@@ -9,8 +9,9 @@ import { AngularFireAuthGuard, redirectUnauthorizedTo, redirectLoggedInTo, email
 import { VerifyComponent } from './verify/verify.component';
 import { map } from 'rxjs/operators';
 import { User } from './model/user';
-import {UnverifiedGuard} from "./guard/unverified.guard";
-import {VerifiedGuard} from './guard/verified.guard';
+import { UnverifiedGuard } from "./guard/unverified.guard";
+import { VerifiedGuard } from './guard/verified.guard';
+import { OpenBetsComponent } from './userSpace/open-bets/open-bets.component'
 
 
 // UnverifiedGuard: redirects not logged in to login and unverified to verify
@@ -20,6 +21,11 @@ const redirectLoggedInToUserspace = () => redirectLoggedInTo(['tournament']);
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
+
+  {
+    path: 'openbets', component: OpenBetsComponent,
+    canActivate: [UnverifiedGuard]
+  },
   {
     path: 'tournament', component: TournamentComponent,
     canActivate: [UnverifiedGuard],
