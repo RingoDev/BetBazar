@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../shared/services/auth/auth.service'
-import { Router, Params } from '@angular/router';
+import { AuthService } from '../../shared'
+import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css',"../bootstrap.min.css"]
+  styleUrls: ['./login.component.css','../bootstrap.min.css']
 })
 export class LoginComponent implements OnInit {
 

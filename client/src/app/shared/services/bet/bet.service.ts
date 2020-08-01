@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {Bet} from '../../../model/bet'
-import {BetQuery} from '../../../model/betQuery'
+import {Bet,BetQuery} from '../../../model'
 import { AngularFireAuth } from '@angular/fire/auth';
 
 @Injectable({

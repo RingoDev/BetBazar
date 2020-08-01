@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TournamentService } from '../shared';
-import { BetService } from '../shared/services/bet/bet.service'
-import { Bet } from '../model/bet'
+import { TournamentService,BetService  } from '../../shared';
+import { Bet } from '../../model/bet'
 import { AngularFireAuth } from '@angular/fire/auth';
-import { ignoreElements } from 'rxjs/operators';
 
 @Component({
   selector: 'app-tournament',

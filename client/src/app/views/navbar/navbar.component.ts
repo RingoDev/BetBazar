@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { AngularFireAuth } from '@angular/fire/auth'
 
-import { AuthService } from '../shared/services/auth/auth.service'
+import { AuthService } from '../../shared'
 import { Router } from '@angular/router';
 
 @Component({
