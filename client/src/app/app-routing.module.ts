@@ -13,7 +13,9 @@ import {
   LandingComponent,
   VerifyComponent,
   PageNotFoundComponent,
-  TournamentComponent
+  TournamentComponent,
+  AcceptedBetsComponent,
+  ActiveBetsComponent
 } from './views/index';
 import { UnverifiedGuard } from "./guard/unverified.guard";
 import { VerifiedGuard } from './guard/verified.guard';
@@ -28,6 +30,14 @@ const redirectLoggedInToUserspace = () => redirectLoggedInTo(['tournament']);
 const routes: Routes = [
   { path: '', component: LandingComponent },
 
+  {
+    path: 'activebets', component: ActiveBetsComponent,
+    canActivate: [UnverifiedGuard]
+  },
+  {
+    path: 'acceptedbets', component: AcceptedBetsComponent,
+    canActivate: [UnverifiedGuard]
+  },
   {
     path: 'openbets', component: OpenBetsComponent,
     canActivate: [UnverifiedGuard]

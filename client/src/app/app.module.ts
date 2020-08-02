@@ -18,8 +18,11 @@ import {
   VerifyComponent,
   PageNotFoundComponent,
   TournamentComponent,
-  NavbarComponent
+  NavbarComponent,
+  AcceptedBetsComponent,
+  ActiveBetsComponent
 } from './views/index';
+
 
 
 @NgModule({
@@ -32,7 +35,9 @@ import {
     PageNotFoundComponent,
     NavbarComponent,
     VerifyComponent,
-    OpenBetsComponent],
+    OpenBetsComponent,
+    AcceptedBetsComponent,
+    ActiveBetsComponent],
   imports: [
     FormsModule,
     ReactiveFormsModule,

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {Bet,BetQuery} from '../../../model'
+import {Bet,BetQuery,AcceptBet, VerboseBet} from '../../../model'
 import { AngularFireAuth } from '@angular/fire/auth';
 
 @Injectable({
@@ -22,5 +22,11 @@ export class BetService {
   queryBets(betQuery:BetQuery): Observable<any> {
     console.log('tried hard to queryBets');
     return this.http.post('http://localhost:8080/bets/query',betQuery);
+  }
+
+  acceptBet(accept:AcceptBet){
+    console.log(accept);
+    console.log('tried hard to accept bet');
+    return this.http.post('http://localhost:8080/bets/accept',accept);
   }
 }

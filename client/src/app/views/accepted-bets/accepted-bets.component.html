@@ -1,0 +1,16 @@
+<div *ngFor="let b of vBets">
+
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header">{{b.data.tournament}}/{{b.data.event}}/{{b.data.round}}</div>
+        <div class="card-body">
+          <h4 *ngIf="isUserTeam(b)" class="card-title">{{b.data.player1}}</h4>
+          <h4 *ngIf="!isUserTeam(b)" class="card-title">{{b.data.player2}}</h4><br>
+          <p *ngIf="isUserTeam(b)" class="card-text">
+            {{b.data.player2}}</p>
+            <p *ngIf="!isUserTeam(b)" class="card-text">
+                {{b.data.player1}}</p>
+        </div>
+      </div>
+    <br>
+    <br>
+</div>

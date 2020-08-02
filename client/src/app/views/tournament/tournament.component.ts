@@ -33,6 +33,8 @@ export class TournamentComponent implements OnInit {
       (user) => {
         if (user) {
           const bet:Bet = {
+            id:0,
+            accepterID: null,
             posterID: user.uid,
             matchReference : {
               tournamentID: tournamentID,
