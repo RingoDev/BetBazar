@@ -42,7 +42,7 @@ My main motivation for this project is to learn basic full-stack development and
 * [x] display userspecific bets
 * [x] set up user specific userspace
 * [x] set up API in Spring to forward operations
-* request all open bets(except same User) from Spring
+* [x] request all open bets(except same User) from Spring
 
 ### Spring
 
@@ -51,15 +51,15 @@ My main motivation for this project is to learn basic full-stack development and
 * [x] save registered User to DB
 * [x] create Endpoint to create a Bet
 * [x] save created Bet to DBrepository
-* create Endpoint to accept Bet
-* mark Bet as saved and add AccepterID
-* create Endpoint to send Bets of certain User
+* [x] create Endpoint to accept Bet
+* [x] mark Bet as saved and add AccepterID
+* [x] create Endpoint to send Bets of certain User
 * [x] Keep a DataBase of registered Users and the corresponding Bets.
 
 ### Styling
 
 * [x] Get a real NavBar
-* Use Bootstrap Cards to style bets
+* [x] Use Bootstrap Cards to style bets
 
 
 
