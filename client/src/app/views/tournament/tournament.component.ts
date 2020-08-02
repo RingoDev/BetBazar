@@ -6,7 +6,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 @Component({
   selector: 'app-tournament',
   templateUrl: './tournament.component.html',
-  styleUrls: ['./tournament.component.css']
+  styleUrls: ['./tournament.component.css', '../bootstrap.min.css']
 })
 export class TournamentComponent implements OnInit {
   tournaments: Array<any>;

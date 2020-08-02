@@ -1,10 +1,11 @@
 <h2>Tournament</h2>
 
 <div *ngFor="let t of tournaments">
-    <div *ngFor="let e of t.events">
+
+    <div class="row justify-content-md-center" *ngFor="let e of t.events">
         <br>
         <br>
-        <div *ngFor="let ph of e.Phases">
+        <div  class="col-md-2" *ngFor="let ph of e.Phases">
             <div *ngFor="let m of ph.Matches">
                 <br>
                 <button type="submit"  
@@ -13,11 +14,10 @@
                 <button type="submit"  
                 class="btn btn-primary btn-block" 
                 (click)="tryPlaceBet(t.id,e.id,ph.id,m.id,1)" >{{m.Home.Desc}}</button>
-                <br>
-                Result: {{m.Away.Res}}:{{m.Home.Res}}
                 <br><br>
             </div>
-            --------
         </div>
+        
     </div>
+  
 </div>

@@ -1,19 +1,17 @@
-<p>you placed these bets:</p>
+<div style="margin-top: 2rem;"></div>
+<div style="margin-left: 2rem;" *ngFor="let b of vBets">
 
-<div *ngFor="let b of vBets">
-    <p>{{b.data.tournament}}</p>
-    <p>{{b.data.event}}</p>
-    <p>{{b.data.round}}</p>
-    <div>
-        <p *ngIf="awayWon(b)">your team:</p>
-        <p>{{b.data.player1}}</p>
-    </div>
-    <div>
-        <p *ngIf="!awayWon(b)">your team:</p>
-        <ng-template #elseBlock>Winner</ng-template>
-        <p>{{b.data.player2}}</p>
-    </div>
-
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header">{{b.data.tournament}}/{{b.data.event}}/{{b.data.round}}</div>
+        <div class="card-body">
+          <h4 *ngIf="awayWon(b)" class="card-title">{{b.data.player1}}</h4>
+          <h4 *ngIf="!awayWon(b)" class="card-title">{{b.data.player2}}</h4><br>
+          <p *ngIf="awayWon(b)" class="card-text">
+            {{b.data.player2}}</p>
+            <p *ngIf="!awayWon(b)" class="card-text">
+                {{b.data.player1}}</p>
+        </div>
+      </div>
     <br>
     <br>
 </div>
