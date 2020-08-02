@@ -43,7 +43,6 @@ public class VerboseBet {
         return "VerboseBet{" +
                 "parent=" + parent +
                 ", data=" + data +
-                ", repository=" + repository +
                 '}';
     }
 

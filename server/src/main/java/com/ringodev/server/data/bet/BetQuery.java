@@ -1,11 +1,23 @@
 package com.ringodev.server.data.bet;
 
+import com.ringodev.server.data.bet.database.BetState;
+
 import java.util.List;
 
 
 public class BetQuery {
 
 
+
+    BetState state;
+
+    public BetState getState() {
+        return state;
+    }
+
+    public void setState(BetState state) {
+        this.state = state;
+    }
 
     int amount;
 

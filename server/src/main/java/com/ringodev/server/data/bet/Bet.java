@@ -1,5 +1,6 @@
 package com.ringodev.server.data.bet;
 
+import com.ringodev.server.data.bet.database.BetState;
 import com.ringodev.server.data.bet.database.SequenceGeneratorService;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -41,9 +42,7 @@ public class Bet {
     }
 
 
-    enum BetState {
-        OPEN, ACCEPTED, CLOSED
-    }
+
 
     public boolean acceptBet(String accepterID) {
         if (state != BetState.OPEN) return false;

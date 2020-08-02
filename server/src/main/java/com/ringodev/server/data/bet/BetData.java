@@ -54,4 +54,14 @@ public class BetData {
         this.player2 = player2;
     }
 
+    @Override
+    public String toString() {
+        return "BetData{" +
+                "tournament='" + tournament + '\'' +
+                ", event='" + event + '\'' +
+                ", round='" + round + '\'' +
+                ", player1='" + player1 + '\'' +
+                ", player2='" + player2 + '\'' +
+                '}';
+    }
 }
