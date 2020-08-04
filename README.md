@@ -9,10 +9,10 @@ My main motivation for this project is to learn basic full-stack development and
 ## Goals
 
 * Displaying the current running tournament on a Website.
-* [x] Allowing Users to crreate an account.
-* Allow a User to offer bets.
-* Allow other Users to accept these bets.
-* Save the Bets in some Database (MongoDb for now).
+* [x] Allowing Users to create an account.
+* [x] Allow a User to offer bets.
+* [x] Allow other Users to accept these bets.
+* [x] Save the Bets in some Database (MongoDb for now).
 
 ## Todos
 
@@ -43,6 +43,7 @@ My main motivation for this project is to learn basic full-stack development and
 * [x] set up user specific userspace
 * [x] set up API in Spring to forward operations
 * [x] request all open bets(except same User) from Spring
+* allow users to choose a username
 
 ### Spring
 
@@ -60,8 +61,11 @@ My main motivation for this project is to learn basic full-stack development and
 
 * [x] Get a real NavBar
 * [x] Use Bootstrap Cards to style bets
+* change the background
 
+### Possible Future Changes
 
+* connect to betsapi.com
 
 
 
